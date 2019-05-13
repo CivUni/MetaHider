@@ -1,0 +1,5 @@
+name: AttrHider
+author: Okx
+version: 1.0
+main: sh.okx.attrhider.AttrHider
+depend: [ProtocolLib]
