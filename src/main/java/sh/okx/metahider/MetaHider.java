@@ -1,4 +1,4 @@
-package sh.okx.attrhider;
+package sh.okx.metahider;
 
 import com.comphenix.protocol.PacketType;
 import com.comphenix.protocol.ProtocolLibrary;
@@ -25,7 +25,7 @@ import org.bukkit.potion.PotionData;
 
 import java.util.List;
 
-public class AttrHider extends JavaPlugin {
+public class MetaHider extends JavaPlugin {
   @Override
   public void onEnable() {
     saveDefaultConfig();
@@ -37,7 +37,7 @@ public class AttrHider extends JavaPlugin {
         @Override
         public void onPacketSending(PacketEvent event) {
           PacketContainer packet = event.getPacket();
-          if (event.getPlayer().hasPermission("attrhider.bypass")) {
+          if (event.getPlayer().hasPermission("metahider.bypass")) {
             return;
           }
 
@@ -85,7 +85,7 @@ public class AttrHider extends JavaPlugin {
 
           if (item == null
               || !isPotion(item.getType())
-              || event.getPlayer().hasPermission("attrhider.bypass")) {
+              || event.getPlayer().hasPermission("metahider.bypass")) {
             return;
           }
 
@@ -105,7 +105,7 @@ public class AttrHider extends JavaPlugin {
         @Override
         public void onPacketSending(PacketEvent event) {
           PacketContainer packet = event.getPacket();
-          if (event.getPlayer().hasPermission("attrhider.bypass")) {
+          if (event.getPlayer().hasPermission("metahider.bypass")) {
             return;
           }
           StructureModifier<Integer> ints = packet.getIntegers();
@@ -125,7 +125,7 @@ public class AttrHider extends JavaPlugin {
         public void onPacketSending(PacketEvent event) {
           PacketContainer packet = event.getPacket();
           Player player = event.getPlayer();
-          if (player.hasPermission("attrhider.bypass")) {
+          if (player.hasPermission("metahider.bypass")) {
             return;
           }
           Entity entity = event.getPacket().getEntityModifier(event).read(0);

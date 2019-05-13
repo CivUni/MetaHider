@@ -1,5 +1,5 @@
-name: AttrHider
+name: MetaHider
 author: Okx
 version: 1.0
-main: sh.okx.attrhider.AttrHider
+main: sh.okx.metahider.MetaHider
 depend: [ProtocolLib]
