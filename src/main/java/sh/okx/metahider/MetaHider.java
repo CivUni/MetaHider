@@ -67,6 +67,9 @@ public class MetaHider extends JavaPlugin implements Listener {
             return;
           }
           if (!shouldBeObfuscated(item.getType())) {
+            if (!item.hasItemMeta()) {
+              return;
+            }
             // remove some meta information for all items
             ItemMeta meta = item.getItemMeta();
             meta.setLore(null);
