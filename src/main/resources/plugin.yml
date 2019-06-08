@@ -1,5 +1,5 @@
 name: MetaHider
 author: Okx
-version: 1.0
+version: 1.0.2
 main: sh.okx.metahider.MetaHider
 depend: [ProtocolLib]

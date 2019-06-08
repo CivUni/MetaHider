@@ -6,3 +6,7 @@ hide-potion-meta: true
 hide-potion-effects: true
 # hide the true health of entities
 hide-health: true
+# hide the speed and jump height of horses
+# it will still be visible when a player is riding the horse,
+# but most modes don't show it when a player is riding it.
+hide-rideable-info: true
