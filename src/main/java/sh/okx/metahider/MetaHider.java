@@ -239,7 +239,6 @@ public class MetaHider extends JavaPlugin implements Listener {
       if (livingMount instanceof Horse) {
         attributes.add(wrapAttribute(handle, livingMount.getAttribute(Attribute.HORSE_JUMP_STRENGTH), "horse.jumpStrength"));
       }
-      System.out.println(attributes);
       handle.getAttributeCollectionModifier().write(0, attributes);
 
       try {
